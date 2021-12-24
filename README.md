@@ -3,7 +3,7 @@
 ### How to use it
 
 1. Clone the repository
-- `git@github.com:gustavofds/mega-sena-games-generator.git`.
+- `git clone https://github.com/gustavofds/mega-sena-games-generator.git`.
 
 2. Navigate to the directory
 - `cd mega-sena-games-generator`
