@@ -1,15 +1,12 @@
-const NUMBER_OF_GAMES = 10;
-const QUANTITY_OF_NUMBERS_PER_GAME = 6;
-
 function generateRandomNumer (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 const generateMegaSenaNumber = () => generateRandomNumer(1, 60);
-
-const generateMegaSenaGame = () => {
+ 
+const generateMegaSenaGame = (numbersQtyPerGame) => {
     const myGame = new Set();
-    while (myGame.size < QUANTITY_OF_NUMBERS_PER_GAME) {
+    while (myGame.size < numbersQtyPerGame) {
         const newNumber = generateMegaSenaNumber();
         
         myGame.add(newNumber);
@@ -18,6 +15,5 @@ const generateMegaSenaGame = () => {
     return [...myGame].join(', ');
 }
 
-for (let i = 1; i <= NUMBER_OF_GAMES; i++) {
-    console.log(`Jogo ${i}: ${generateMegaSenaGame()}`)
-}
+module.exports = generateMegaSenaGame;
+
