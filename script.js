@@ -12,7 +12,7 @@ const generateMegaSenaGame = (numbersQtyPerGame) => {
         myGame.add(newNumber);
     }
 
-    return [...myGame].join(', ');
+    return [...myGame].sort((a, b) => a - b).join(', ');
 }
 
 module.exports = generateMegaSenaGame;
